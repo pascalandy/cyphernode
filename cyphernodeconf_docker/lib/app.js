@@ -469,7 +469,7 @@ module.exports = class App {
 
     for( let feature of this.features ) {
       const f = {
-        active: feature.checked,
+        active: this.isChecked( 'features', feature.value ),
         name: feature.name,
         label: feature.value,
         host: feature.value,
